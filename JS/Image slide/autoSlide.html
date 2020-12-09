@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Auto Image Slider</title>
+    <style media="screen">
+    .box{
+      width: 90%;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid red;
+      text-align: center;
+    }
+    img{
+      width: 80%;
+      height: 450px;
+      transition: 3000ms;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img id='source' onclick="delay()" src="CB.jpg" alt="">
+    </div>
+    <script>
+    var t = setInterval (slideMove , 900);
+
+    var images = ['CB.jpg', 'CB1.jpg', 'CB2.jpg'];
+    var slide = document.getElementById('source');
+    var num = 0;
+    function slideMove(){
+      num++;
+      if(num>=3){
+        num = 0;
+      }
+      slide.src = images[num];
+    }
+    // var break;
+    // function delay(){
+    //   var x = 9000;
+    //   break = slide.setTimeout(clearInterval(t), x);
+    //   // if(x >= 9000){
+    //   //   slideMove();
+    //   }
+    // }
+
+
+    </script>
+  </body>
+</html>

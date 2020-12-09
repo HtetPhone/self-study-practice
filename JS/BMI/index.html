@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BMI Test</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="head">
+      <h1>BMI (Body Mass Index)</h1>
+      <p>Check what your BMI is and know if you have enough weight!</p>
+    </div>
+
+    <div class="main">
+      <div class="kgM">
+        <div class="field">
+          <label for="kilo">အလေးချိန် :</label>
+          <input type="text" id="kilo" placeholder="ကီလိုဂရမ်" required>
+        </div>
+
+        <div class="field">
+          <label for="meter">အရပ်အမြင့် :</label>
+          <input type="text" id='meter' placeholder="မီတာ" required>
+        </div>
+        <div class="btn">
+          <button onclick="bmi()" class="bmi" type="button" name="button">BMI</button>
+          <button onclick="refresh()" class="refresh" type="button" name="button">Refresh</button>
+        </div>
+      </div>
+
+      <div class="lbIn">
+        <div class="field">
+          <label for="pound">အလေးချိန် :</label>
+          <input type="text" id="pound" placeholder="ပေါင်" required>
+        </div>
+
+        <div class="field">
+          <label for="inch">အရပ်အမြင့် :</label>
+          <input type="text" id='inch' placeholder="လက်မ" required>
+        </div>
+        <div class="btn">
+          <button onclick="bmiOne()" class="bmi" type="button" name="button">BMI</button>
+          <button onclick="refreshOne()" class="refresh" type="button" name="button">Refresh</button>
+        </div>
+      </div>
+    </div>
+  <script src="script.js"> </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Slider with JS</title>
+    <style media="screen">
+    /* .box{
+      width: 80%;
+      margin: 25px auto;
+      align-items: center;
+    } */
+    /* button{
+      position: relative;
+      top: -190px;
+    } */
+    img{
+      width: 50%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button id="pre" onclick="prev()" type="button" name="button">Prev</button>
+      <img id="source" src="CB.jpg" alt="">
+      <button id="next" onclick="next()" type="button" name="button">Next</button>
+    </div>
+
+
+    <script>
+      var images = ['CB.jpg', 'CB1.jpg', 'CB2.jpg'];
+      // console.log(images[1]);
+
+      var slider = document.getElementById('source')
+      var num = 0;
+
+      function next(){
+        num++;
+        if(num>=images.length){
+          num = 0;
+        }
+        slider.src = images[num];
+      }
+
+      function prev(){
+        num--;
+        if(num<0){
+          num = images.length-1;
+        }
+        slider.src = images[num];
+      }
+    </script>
+  </body>
+</html>
